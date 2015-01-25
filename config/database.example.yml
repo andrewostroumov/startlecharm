@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  username: root
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: monitoring_development
+
+test:
+  <<: *default
+  database: monitoring_test
+
+production:
+  <<: *default
+  database: monitoring
