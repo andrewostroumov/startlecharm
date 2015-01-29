@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400)
+
+@import "pages/variables"
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+@import "pages/navbar"
+@import "pages/header"
+@import "pages/index"
+@import "pages/footer"
+
+body
+  background-color: #f6f5f2
+  font-family: 'Open Sans', sans-serif
+  font-weight: 400
+  font-size: 13px
+
+@media screen and (min-width: 1200px)
+  .container
+    width: 960px
+
+.btn-success-flat
+  color: white
+  background: darken(#a3d39c, 5%)
+  border-color: darken(#a3d39c, 15%)
+  &:hover
+    color: white
+    background: #a3d39c
+    border-color: #a3d39c
+
+.btn-black
+  color: #fff
+  background-color: black
+  border-color: black
+  &:hover
+    color: #fff
+    background-color: lighten(black, 5%)
+    border-color: lighten(black, 5%)
+
+.btn-deep-blue
+  color: white
+  background-color: $deep-blue
+  border-color: $deep-blue
+  &:hover
+    color: #fff
+    background-color: lighten($deep-blue, 10%)
+    border-color: lighten($deep-blue, 10%)
+
+.white
+  color: white
+
+.orange
+  color: $contrast-orange
+
+.p
+  color: #444
+
+.night-blue
+  color: $night-blue
+
+.form-inverse
+  color: white
+  background: #080c11
+  border: none
+
+.tiny-rounded
+  border-radius: 2px
+
+.sign-up-input
+  height: 50px
+  width: 300px !important
+
+.sign-up-submit
+  height: 50px
+
+.text-center
+  text-align: center

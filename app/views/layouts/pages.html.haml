@@ -1,0 +1,11 @@
+!!!
+%html
+  %head
+    %title Cloud Monitoring
+    = stylesheet_link_tag    'pages'
+    = javascript_include_tag 'pages'
+    = csrf_meta_tags
+  %body
+    = render 'shared/pages/navbar'
+    = yield
+    = render 'shared/pages/footer'

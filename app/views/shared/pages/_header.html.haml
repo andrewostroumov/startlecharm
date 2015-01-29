@@ -1,0 +1,16 @@
+%header
+  .container
+    .row
+      .col-md-offset-2.col-md-8
+        %h1.white.text-center Cloud linux servers monitoring
+    .row
+      .col-md-12
+        = render 'shared/pages/carousel'
+    .row
+      .col-md-offset-1.col-md-10
+        = form_tag '#', class: 'form-inline' do
+          .form-group
+            = email_field_tag 'username', nil, placeholder: 'Email', class: 'form-control sign-up-input tiny-rounded'
+          .form-group
+            = password_field_tag 'password', nil, placeholder: 'Password', class: 'form-control sign-up-input tiny-rounded'
+          = submit_tag 'Create Account', class: 'btn btn-lg btn-deep-blue input-lg tiny-rounded sign-up-submit'
