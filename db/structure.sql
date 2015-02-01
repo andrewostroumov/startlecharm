@@ -24,12 +24,13 @@ DROP TABLE IF EXISTS `logs`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `mem_total` bigint(20) unsigned DEFAULT '0',
-  `mem_free` bigint(20) unsigned DEFAULT '0',
-  `swap_total` bigint(20) unsigned DEFAULT '0',
-  `swap_free` bigint(20) unsigned DEFAULT '0',
-  `cpu_load` float DEFAULT '0',
-  `cpu_temp` float DEFAULT '0',
+  `memory_total` int(10) unsigned DEFAULT NULL,
+  `memory_free` int(10) unsigned DEFAULT NULL,
+  `memory_available` int(10) unsigned DEFAULT NULL,
+  `swap_total` int(10) unsigned DEFAULT NULL,
+  `swap_free` int(10) unsigned DEFAULT NULL,
+  `cpu_load` int(10) unsigned DEFAULT NULL,
+  `cpu_temp` float DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`)
@@ -58,6 +59,6 @@ CREATE TABLE `schema_migrations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-01-31 18:33:06
+-- Dump completed on 2015-02-01  2:11:36
 INSERT INTO schema_migrations (version) VALUES ('20150129224406');
 
