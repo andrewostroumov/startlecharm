@@ -12,7 +12,7 @@ module Monitoring
     resource :logs do
       desc 'Create log.'
       post do
-        Log.create!(log_params.deep_join_keys)
+        Log.create!(log_params.deep_join)
       end
     end
   end

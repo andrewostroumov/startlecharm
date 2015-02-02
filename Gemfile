@@ -48,3 +48,4 @@ end
 gem 'high_voltage', '~> 2.2.1'
 gem 'grape'
 gem 'hashie_rails'
+gem 'hash_deep_join', git: 'git@github.com:Ynnni/hash-deep-join.git'

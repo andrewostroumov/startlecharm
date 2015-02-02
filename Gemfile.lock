@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:Ynnni/hash-deep-join.git
+  revision: 4333170f108ce45701d85012c7294561f602a95f
+  specs:
+    hash_deep_join (0.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -236,6 +242,7 @@ DEPENDENCIES
   faker
   grape
   haml-rails
+  hash_deep_join!
   hashie_rails
   high_voltage (~> 2.2.1)
   jbuilder (~> 2.0)
