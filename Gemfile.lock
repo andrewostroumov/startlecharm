@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:Ynnni/hash-deep-join.git
-  revision: 4333170f108ce45701d85012c7294561f602a95f
+  revision: b75f5867e8a72d23e0490a45c52405300ccb90ff
   specs:
     hash_deep_join (0.0.1)
 
