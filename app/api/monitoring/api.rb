@@ -15,7 +15,7 @@ module Monitoring
       end
 
       def authenticate!
-        @server = Server.authenticate headers['X-User-Email'], headers['X-Server-Token']
+        @server = Server.authenticate headers['X-Server-Token']
         raise Monitoring::API::Unauthorized, 'Unauthorized' unless @server
       end
     end

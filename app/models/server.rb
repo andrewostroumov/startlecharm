@@ -5,8 +5,7 @@ class Server < ActiveRecord::Base
   has_many :logs
   validates :user_id, presence: true
 
-  def self.authenticate(email, token)
-    user = User.find_by_email(email)
-    user.servers.find_by(authentication_token: token) rescue nil
+  def self.authenticate(token)
+    Server.find_by_authentication_token(token)
   end
 end
