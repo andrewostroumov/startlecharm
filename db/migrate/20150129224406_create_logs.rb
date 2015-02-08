@@ -8,6 +8,7 @@ class CreateLogs < ActiveRecord::Migration
       t.column  :swap_free,          'integer unsigned'
       t.column  :cpu_load,           'integer unsigned'
       t.float   :cpu_temp
+      t.references :server
 
       t.timestamps null: false
     end
