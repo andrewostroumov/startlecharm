@@ -16,29 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `logs`
---
-
-DROP TABLE IF EXISTS `logs`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `logs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `memory_total` int(10) unsigned DEFAULT NULL,
-  `memory_free` int(10) unsigned DEFAULT NULL,
-  `memory_available` int(10) unsigned DEFAULT NULL,
-  `swap_total` int(10) unsigned DEFAULT NULL,
-  `swap_free` int(10) unsigned DEFAULT NULL,
-  `cpu_load` int(10) unsigned DEFAULT NULL,
-  `cpu_temp` float DEFAULT NULL,
-  `server_id` int(11) DEFAULT NULL,
-  `created_at` datetime NOT NULL,
-  `updated_at` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
 -- Table structure for table `schema_migrations`
 --
 
@@ -109,9 +86,7 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-08 19:46:08
-INSERT INTO schema_migrations (version) VALUES ('20150129224406');
-
+-- Dump completed on 2015-02-18  9:53:09
 INSERT INTO schema_migrations (version) VALUES ('20150207225318');
 
 INSERT INTO schema_migrations (version) VALUES ('20150208173222');
