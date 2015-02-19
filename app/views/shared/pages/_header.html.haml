@@ -7,10 +7,9 @@
       .col-md-12
         = render 'shared/pages/carousel'
     .row
-      .col-md-offset-1.col-md-10
-        = form_tag '#', class: 'form-inline' do
-          .form-group
-            = email_field_tag 'username', nil, placeholder: 'Email', class: 'form-control sign-up-input tiny-rounded'
-          .form-group
-            = password_field_tag 'password', nil, placeholder: 'Password', class: 'form-control sign-up-input tiny-rounded'
-          = submit_tag 'Create Account', class: 'btn btn-lg btn-deep-blue input-lg tiny-rounded sign-up-submit'
+      = form_tag '#', class: 'form-inline' do
+        .form-group.col-md-4.col-md-offset-1.col-xs-12.remove-padding
+          = email_field_tag 'username', nil, placeholder: 'Email', class: 'form-control sign-up-input tiny-rounded'
+        .form-group.col-md-4.col-xs-12.remove-padding
+          = password_field_tag 'password', nil, placeholder: 'Password', class: 'form-control sign-up-input tiny-rounded'
+        = submit_tag 'Create Account', class: 'col-md-3 col-xs-12 remove-padding btn btn-lg btn-deep-blue input-lg tiny-rounded sign-up-submit'
