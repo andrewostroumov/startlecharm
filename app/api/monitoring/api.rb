@@ -27,5 +27,12 @@ module Monitoring
         Snapshot.create(snapshot_params) if snapshot_params
       end
     end
+
+    resource :servers do
+      before { authenticate! }
+      patch :update do
+        @server.update_attributes params[:server]
+      end
+    end
   end
 end

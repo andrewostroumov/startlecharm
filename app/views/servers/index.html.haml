@@ -1,0 +1,31 @@
+%h1 Listing servers
+
+%table
+  %thead
+    %tr
+      %th Distributive
+      %th Kernel Version
+      %th Ip
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @servers.active.each do |server|
+      %tr
+        %td= server.distro_name
+        %td= server.kernel_release
+        %td= server.ip
+        %td= link_to 'Show', server
+        %td= link_to 'Edit', edit_server_path(server)
+        %td= link_to 'Destroy', server, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+inactive servers:
+
+%ul
+  - @servers.inactive.each do |server|
+    %li= link_to server.ip, server_path(server)
+
+= link_to 'New Server', new_server_path

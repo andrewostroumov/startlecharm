@@ -1,0 +1,25 @@
+%p#notice= notice
+
+distro_name:
+= @server.distro_name
+%br
+kernel_release:
+= @server.kernel_release
+%br
+authentication_token:
+= @server.authentication_token
+%br
+uptime:
+= @server.uptime
+%br
+ip:
+= @server.ip
+%br
+state:
+= @server.state
+%br
+= link_to 'Activate', activate_server_path(@server), method: :patch
+\|
+= link_to 'Edit', edit_server_path(@server)
+\|
+= link_to 'Back', servers_path
