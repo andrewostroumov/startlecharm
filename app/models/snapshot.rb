@@ -3,4 +3,5 @@ class Snapshot
   # include Mongoid::Attributes::Dynamic
   field :server_id, type: Integer
   field :memory, type: Hash
+  field :cpu, type: Hash
 end

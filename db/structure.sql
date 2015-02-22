@@ -86,7 +86,7 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-02-18  9:53:09
+-- Dump completed on 2015-02-19 11:56:40
 INSERT INTO schema_migrations (version) VALUES ('20150207225318');
 
 INSERT INTO schema_migrations (version) VALUES ('20150208173222');

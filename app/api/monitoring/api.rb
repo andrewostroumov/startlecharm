@@ -10,8 +10,9 @@ module Monitoring
     prefix :api
 
     helpers do
-      def log_params
-        params[:log]
+      def snapshot_params
+        return unless params[:snapshot]
+        params[:snapshot].merge server_id: @server.id
       end
 
       def authenticate!
@@ -20,10 +21,10 @@ module Monitoring
       end
     end
 
-    resource :logs do
+    resource :snapshots do
       before { authenticate! }
       post do
-        @server.logs.create!(log_params.deep_join) if log_params
+        Snapshot.create(snapshot_params) if snapshot_params
       end
     end
   end
