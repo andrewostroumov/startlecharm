@@ -1,0 +1,21 @@
+#clouds-carousel.carousel.slide{ data: { ride: :carousel, interval: 2000 } }
+  %ol.carousel-indicators
+    %li.active{ data: { target: '#clouds-carousel', :'slide-to' => 0 } }
+    %li{ data: { target: '#clouds-carousel', :'slide-to' => 1 } }
+    %li{ data: { target: '#clouds-carousel', :'slide-to' => 2 } }
+  .carousel-inner{role: 'listbox'}
+    .item.active
+      .carousel-image
+        = image_tag 'cloud.png'
+    .item
+      .carousel-image
+        = image_tag 'cloud.png'
+    .item
+      .carousel-image
+        = image_tag 'cloud.png'
+  %a.left.carousel-control{ href: '#clouds-carousel', role: 'button', data: { slide: 'prev' } }
+    %span.glyphicon.glyphicon-chevron-left{ :'aria-hidden' => 'true' }
+    %span.sr-only Previous
+  %a.right.carousel-control{ href: '#clouds-carousel', role: 'button', data: { slide: 'next' } }
+    %span.glyphicon.glyphicon-chevron-right{ :'aria-hidden' => 'true' }
+    %span.sr-only Next

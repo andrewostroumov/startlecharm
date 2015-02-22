@@ -1,0 +1,14 @@
+%footer
+  .container
+    .row
+      .footer-brand
+        = image_tag 'logo.png'
+      .col-md-7
+        = form_tag '#', class: 'form-horizontal' do
+          .form-group.white Ask as your questions
+          .form-group
+            = email_field_tag 'feedback[email]', nil, class: 'form-control form-inverse tiny-rounded', placeholder: 'Leave your email cobber'
+          .form-group
+            = text_area_tag 'feedback[message]', nil, class: 'form-control form-inverse tiny-rounded', placeholder: 'Leave your message', rows: 11
+          .form-group
+            = submit_tag 'Send', class: 'btn btn-lg btn-black tiny-rounded pull-right'
