@@ -4,4 +4,5 @@ class Snapshot
   field :server_id, type: Integer
   field :memory, type: Hash
   field :cpu, type: Hash
+  field :disks, type: Array
 end

@@ -28,8 +28,12 @@ module Monitoring
       end
     end
 
-    resource :servers do
+    resource :server do
       before { authenticate! }
+      get do
+        @server
+      end
+
       patch :update do
         @server.update_attributes params[:server]
       end

@@ -6,6 +6,8 @@ class ServersController < ApplicationController
   end
 
   def show
+    # HACK
+    @snapshot = Snapshot.where(server_id: @server.id).desc(:id).limit(1).first
   end
 
   def new
