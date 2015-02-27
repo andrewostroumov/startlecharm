@@ -1,5 +1,6 @@
 class ServersController < ApplicationController
   before_action :set_server, only: [:show, :edit, :update, :destroy, :activate]
+  before_action :authenticate_user!
 
   def index
     @servers = current_user.servers

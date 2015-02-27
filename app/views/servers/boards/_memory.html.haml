@@ -1,5 +1,3 @@
-.panel.panel-primary
-  .panel-heading
-    %h3.panel-title RAM Usage
-  .panel-body
-    #memory_chart{style: "height: 300px;", data: { update_url: memory_snapshots_path(@server, format: :json) } }
+.well
+  %h3 RAM Usage
+  #memory_chart{style: "height: 300px;", data: { update_url: memory_snapshots_path(@server, format: :json) } }

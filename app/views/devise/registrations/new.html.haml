@@ -1,0 +1,34 @@
+.row
+  .col-md-offset-4.col-md-5
+    .well
+      %fieldset
+        %legend Sign up
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .form-group
+            = f.label :email, class: 'col-lg-2 control-label'
+            .col-lg-10
+              = f.email_field :email, autofocus: true, class: 'form-control'
+          .form-group
+            = f.label :password, class: 'col-lg-2 control-label'
+            .col-lg-10
+              = f.password_field :password, autocomplete: "off", class: 'form-control'
+              - if @validatable
+                %em
+                  (#{@minimum_password_length} characters minimum)
+          .form-group
+            = f.label :password_confirmation, class: 'col-lg-2 control-label'
+            .col-lg-10
+              = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+              - if @validatable
+                %em
+                  (#{@minimum_password_length} characters minimum)
+              - if devise_mapping.rememberable?
+                .checkbox
+                  %label
+                    = f.check_box :remember_me
+                    Remember me
+          .form-group
+            .col-lg-10.col-lg-offset-2
+              = f.submit "Sign up", class: 'btn btn-primary'
+        = render "devise/shared/links"

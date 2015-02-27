@@ -1,5 +1,3 @@
-.panel.panel-primary
-  .panel-heading
-    %h3.panel-title CPU Load
-  .panel-body
-    #cpu_chart{style: "height: 300px;", data: { update_url: cpu_snapshots_path(@server, format: :json) } }
+.well
+  %h3 CPU Load
+  #cpu_chart{style: "height: 300px;", data: { update_url: cpu_snapshots_path(@server, format: :json) } }

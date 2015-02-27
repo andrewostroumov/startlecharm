@@ -1,27 +1,25 @@
-.panel.panel-primary
-  .panel-heading
-    %h3.panel-title General Info
-  .panel-body
-    %table.table
-      %thead
-      %tbody  
-        %tr
-          %td
-            %strong Distributive
-          %td= @server.distro_name 
-        %tr
-          %td
-            %strong Kernel
-          %td= @server.kernel_release
-        %tr
-          %td
-            %strong Authentication Token
-          %td= @server.authentication_token 
-        %tr
-          %td
-            %strong IP
-          %td= @server.ip 
-        %tr
-          %td
-            %strong State
-          %td= @server.state
+.well
+  %h3 General Info
+  %table.table
+    %thead
+    %tbody  
+      %tr
+        %td
+          %strong Distributive
+        %td= @server.distro_name 
+      %tr
+        %td
+          %strong Kernel
+        %td= @server.kernel_release
+      %tr
+        %td
+          %strong Authentication Token
+        %td= @server.authentication_token 
+      %tr
+        %td
+          %strong IP
+        %td= @server.ip 
+      %tr
+        %td
+          %strong State
+        %td= @server.state

@@ -1,5 +1,7 @@
 class SnapshotsController < ApplicationController
   before_action :set_snapshots
+  before_action :authenticate_user!
+  
   respond_to :json
   
   def index
