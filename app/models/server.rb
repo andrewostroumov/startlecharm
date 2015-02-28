@@ -25,7 +25,7 @@ class Server < ActiveRecord::Base
   scope :inactive, -> { where(state: :inactive) }
 
   before_create do
-    self.state = :inactive
+    self.state = 'inactive'
   end
 
   def self.authenticate(token)

@@ -9,12 +9,13 @@
         %th Usage
         %th Mount Path
     %tbody
-      - @snapshot.disks.each do |disk|
-        %tr
-          %td= disk['name']
-          %td
-            .progress{ style: "width: 70px" }
-              .progress-bar.progress-bar-info{ data: { use: disk['use'] } }
-          %td #{ disk_stats disk }
-          %td= disk['use']
-          %td= disk['mount_path']
+      - if @snapshot
+        - @snapshot.disks.each do |disk|
+          %tr
+            %td= disk['name']
+            %td
+              .progress{ style: "width: 70px" }
+                .progress-bar.progress-bar-info{ data: { use: disk['use'] } }
+            %td #{ disk_stats disk }
+            %td= disk['use']
+            %td= disk['mount_path']
