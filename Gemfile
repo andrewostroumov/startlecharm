@@ -45,6 +45,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'pry'
+  gem 'railroady'
 end
 
 gem 'high_voltage', '~> 2.2.1'

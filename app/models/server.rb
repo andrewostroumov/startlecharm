@@ -11,13 +11,13 @@
 #  user_id              :integer
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
+#  state                :string(255)
 #
 
 class Server < ActiveRecord::Base
   acts_as_token_authenticatable
 
   belongs_to :user
-  has_many :logs
   validates :ip, :user_id, presence: true
   validates :ip, uniqueness: true
 
