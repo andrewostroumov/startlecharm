@@ -1,7 +1,8 @@
 class SnapshotsController < ApplicationController
   before_action :set_snapshots
   before_action :authenticate_user!
-  
+  before_action :respond_with_json, except: :index
+
   respond_to :json
   
   def index
@@ -9,18 +10,19 @@ class SnapshotsController < ApplicationController
   end
 
   def cpu
-    respond_with @snapshots.to_json(only: :cpu)
   end
 
   def memory
-    respond_with @snapshots.to_json(only: :memory)
   end
 
   def disks
-    respond_with @snapshots.to_json(only: :disks)
   end
 
   private
+
+  def respond_with_json
+    respond_with @snapshots.to_json(only: action_name)
+  end
 
   def set_snapshots
     @server = Server.find(params[:id])
