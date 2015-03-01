@@ -48,6 +48,18 @@ group :development, :test do
   gem 'railroady'
 end
 
+group :development do
+  gem 'capistrano', '~> 3.3.0'
+  gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'capistrano-bundler', '~> 1.1.3'
+  gem 'capistrano-rails', '~> 1.1.2'
+  gem 'capistrano3-unicorn'
+end
+
+group :production do
+  gem 'unicorn', '~> 4.8.3'
+end
+
 gem 'high_voltage', '~> 2.2.1'
 gem 'grape'
 gem 'hashie_rails'

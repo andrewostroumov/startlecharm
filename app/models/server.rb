@@ -18,7 +18,8 @@ class Server < ActiveRecord::Base
   acts_as_token_authenticatable
 
   belongs_to :user
-  validates :ip, :user_id, presence: true
+  validates :user, presence: true
+  validates :ip, presence: true
   validates :ip, uniqueness: true
 
   scope :active, -> { where(state: :active) }

@@ -16,10 +16,9 @@
 
 FactoryGirl.define do
   factory :server do
-    distro_name "MyString"
-kernel_release "MyString"
-uptime 1
-ip "MyString"
+    distro_name "Arch Linux"
+    kernel_release "4.0"
+    ip { Faker::Internet.ip_v4_address }
+    association :user
   end
-
 end
